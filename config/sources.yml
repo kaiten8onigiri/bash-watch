@@ -1,0 +1,36 @@
+user_agent: "bash-watch/0.1 (personal release monitor; contact: repository owner)"
+
+# Official Japanese product pages. Add/remove entries without changing code.
+sources:
+  - name: Nike JP
+    url: https://www.nike.com/jp/w/new-basketball-shoes-3glsmz3n82yzy7ok
+    include_url_regex: "/jp/t/"
+    exclude_title_regex: "もっと見る|お気に入り|画像"
+
+  - name: adidas JP
+    url: https://www.adidas.jp/シューズ・靴-バスケットボール
+    include_url_regex: "/[^/]+/[A-Z0-9_-]+\\.html"
+    exclude_title_regex: "画像|比較"
+
+  - name: Under Armour JP
+    url: https://www.underarmour.co.jp/disp/CSfDispListPage_001.jsp?dispNo=001004&g=2
+    include_url_regex: "/f/dsg-[0-9]+"
+    exclude_title_regex: "画像|お気に入り"
+
+  # Cloudflare currently rejects unattended requests. Kept as an opt-in source
+  # so it can be re-enabled if PUMA permits this access later.
+  - name: PUMA JP
+    enabled: false
+    url: https://jp.puma.com/jp/ja/スポーツ/バスケットボール/商品一覧/シューズ
+    include_url_regex: "/jp/ja/pd/"
+    exclude_title_regex: "画像|クイックビュー"
+
+  - name: ASICS JP
+    url: https://www.asics.com/jp/ja-jp/basketball-shoes/c/ja40205100/
+    include_url_regex: "/jp/ja-jp/[^/]+/p/"
+    exclude_title_regex: "画像|クイックビュー"
+
+  - name: New Balance JP
+    url: https://shop.newbalance.jp/men/shoes/basketball/
+    include_url_regex: "/pd/[^/]+\\.html"
+    exclude_title_regex: "画像|お気に入り"

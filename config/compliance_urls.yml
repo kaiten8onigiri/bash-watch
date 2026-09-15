@@ -1,0 +1,23 @@
+user_agent: "bash-watch/0.1 (monthly compliance change check; contact: repository owner)"
+
+# A changed page triggers a Discord notice for human review.
+# robots.txt changes can indicate a crawler-policy change. The legal pages cover
+# the Japanese statutes most relevant to this monitor. Add official terms URLs
+# here whenever a manufacturer publishes a stable URL.
+targets:
+  - name: 著作権法（e-Gov）
+    url: https://laws.e-gov.go.jp/law/345AC0000000048
+  - name: 不正アクセス禁止法（e-Gov）
+    url: https://laws.e-gov.go.jp/law/411AC0000000128
+  - name: Nike JP robots.txt
+    url: https://www.nike.com/robots.txt
+  - name: adidas JP robots.txt
+    url: https://www.adidas.jp/robots.txt
+  - name: Under Armour JP robots.txt
+    url: https://www.underarmour.co.jp/robots.txt
+  - name: PUMA JP robots.txt
+    url: https://jp.puma.com/robots.txt
+  - name: ASICS JP robots.txt
+    url: https://www.asics.com/robots.txt
+  - name: New Balance JP robots.txt
+    url: https://shop.newbalance.jp/robots.txt

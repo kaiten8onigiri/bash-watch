@@ -1,0 +1,60 @@
+name: Watch official basketball shoe releases
+
+on:
+  schedule:
+    # Daily at 12:00 JST (03:00 UTC).
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+    inputs:
+      notify_initial:
+        description: "Notify all current items when creating the baseline"
+        required: false
+        type: boolean
+        default: false
+
+# The workflow never writes to main. State is kept in the Actions cache.
+permissions:
+  contents: read
+
+concurrency:
+  group: basketball-shoe-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
+    # Hard-stop a stalled run so it cannot consume unbounded Actions minutes.
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Restore deduplication state
+        uses: actions/cache@v4
+        with:
+          path: data/state.json
+          key: ${{ runner.os }}-bash-watch-state-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-bash-watch-state-
+      - name: Install
+        run: pip install .
+      - name: Check official pages and notify
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          GENERIC_WEBHOOK_URL: ${{ secrets.GENERIC_WEBHOOK_URL }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: |
+          extra=""
+          if [ "${{ inputs.notify_initial }}" = "true" ]; then extra="--notify-initial"; fi
+          bash-watch --notify $extra

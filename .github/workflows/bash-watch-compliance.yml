@@ -1,0 +1,41 @@
+name: Monthly compliance source check
+
+on:
+  schedule:
+    # First day of every month at 12:30 JST (03:30 UTC).
+    - cron: "30 3 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: basketball-shoe-compliance-watch
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Restore compliance comparison state
+        uses: actions/cache@v4
+        with:
+          path: data/compliance_state.json
+          key: ${{ runner.os }}-bash-watch-compliance-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-bash-watch-compliance-
+      - name: Install
+        run: pip install .
+      - name: Check laws and crawler policies
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python -m bash_watch.compliance
