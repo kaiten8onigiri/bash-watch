@@ -12,16 +12,15 @@ import yaml
 from .extract import extract_items
 from .models import Item
 from .notify import send
-from .state import diff, load, save
+from .state import diff, load, merge_seen, save
 
-USER_AGENT = "bash-watch/0.1 (+official basketball shoe release monitor)"
+USER_AGENT = "bash-watch/0.2 (+official basketball shoe release monitor)"
 
 
 async def fetch(client: httpx.AsyncClient, source: dict) -> tuple[dict, list[Item], str | None]:
     try:
         response = await client.get(source["url"])
         response.raise_for_status()
-        # Some Japanese commerce sites label Windows-31J correctly but are decoded as UTF-8.
         if response.charset_encoding:
             encoding = response.charset_encoding.lower()
             response.encoding = "cp932" if encoding in {"windows-31j", "ms932"} else encoding
@@ -30,7 +29,7 @@ async def fetch(client: httpx.AsyncClient, source: dict) -> tuple[dict, list[Ite
         if len(items) < minimum:
             return source, [], f"extracted {len(items)} items (minimum: {minimum})"
         return source, items, None
-    except Exception as exc:  # noqa: BLE001 - isolate failures between independent sites
+    except Exception as exc:  # noqa: BLE001
         return source, [], f"{type(exc).__name__}: {exc}"
 
 
@@ -54,25 +53,17 @@ async def run(args: argparse.Namespace) -> int:
         print(f"{source['name']}: {len(items)} items")
 
     previous = load(args.state)
-    # Preserve prior data when a source temporarily fails; prevents false re-add notifications.
-    for key, item in previous.items():
-        if item.source not in successful_sources:
-            current[key] = item
-
     changes = diff(previous, current)
     first_run = not previous
-    state_changed = previous.keys() != current.keys() or any(
-        previous[key].fingerprint != item.fingerprint
-        for key, item in current.items()
-        if key in previous
-    )
+    history = merge_seen(previous, current)
+    state_changed = previous != history
     if args.dry_run:
-        print(f"dry-run: {len(changes)} changes; state not written")
+        print(f"dry-run: {len(changes)} new products; state not written")
     else:
         if state_changed:
-            save(args.state, current, datetime.now(UTC).isoformat())
+            save(args.state, history, datetime.now(UTC).isoformat())
         else:
-            print("no changes; state not written")
+            print("no new products; state not written")
         if args.notify and changes and (not first_run or args.notify_initial):
             destinations = send(changes)
             print("notified: " + (", ".join(destinations) or "no destinations configured"))
@@ -81,7 +72,6 @@ async def run(args: argparse.Namespace) -> int:
 
     for failure in failures:
         print(f"warning: {failure}", file=sys.stderr)
-    # Only fail the run when every source failed.
     return 1 if enabled and not successful_sources else 0
 
 
