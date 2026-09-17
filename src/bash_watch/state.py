@@ -18,7 +18,19 @@ def load(path: Path) -> dict[str, Item]:
 
 def diff(previous: dict[str, Item], current: dict[str, Item]) -> list[Change]:
     """Notify only for product identities that have never been observed before."""
-    return [Change("new", item) for key, item in current.items() if key not in previous]
+    initialized_sources = {item.source for item in previous.values()}
+    return [
+        Change("new", item)
+        for key, item in current.items()
+        if key not in previous and item.source in initialized_sources
+    ]
+
+
+def newly_initialized_sources(
+    previous: dict[str, Item], current: dict[str, Item]
+) -> set[str]:
+    previous_sources = {item.source for item in previous.values()}
+    return {item.source for item in current.values()} - previous_sources
 
 
 def merge_seen(previous: dict[str, Item], current: dict[str, Item]) -> dict[str, Item]:
