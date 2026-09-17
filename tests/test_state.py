@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from bash_watch.models import Item
-from bash_watch.state import diff, load, merge_seen, save
+from bash_watch.state import diff, load, merge_seen, newly_initialized_sources, save
 
 
 def test_only_never_seen_product_codes_are_new():
@@ -30,3 +30,12 @@ def test_old_url_based_state_keys_are_migrated(tmp_path: Path):
     path = tmp_path / "state.json"
     save(path, {"obsolete-url-key": item}, "now")
     assert load(path) == {item.key: item}
+
+
+def test_first_success_for_each_source_creates_baseline_without_notifications():
+    nike = Item("Nike", "Known", "https://www.nike.com/jp/t/known/AA1000-001")
+    adidas = Item("adidas", "Existing", "https://www.adidas.jp/shoe/IE2696.html")
+    previous = {nike.key: nike}
+    current = {nike.key: nike, adidas.key: adidas}
+    assert diff(previous, current) == []
+    assert newly_initialized_sources(previous, current) == {"adidas"}
