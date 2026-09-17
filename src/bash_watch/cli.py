@@ -10,9 +10,9 @@ import httpx
 import yaml
 
 from .extract import extract_items
-from .models import Item
+from .models import Change, Item
 from .notify import send
-from .state import diff, load, merge_seen, save
+from .state import diff, load, merge_seen, newly_initialized_sources, save
 
 USER_AGENT = "bash-watch/0.2 (+official basketball shoe release monitor)"
 
@@ -53,8 +53,11 @@ async def run(args: argparse.Namespace) -> int:
         print(f"{source['name']}: {len(items)} items")
 
     previous = load(args.state)
-    changes = diff(previous, current)
     first_run = not previous
+    changes = diff(previous, current)
+    if first_run and args.notify_initial:
+        changes = [Change("new", item) for item in current.values()]
+    baseline_sources = newly_initialized_sources(previous, current)
     history = merge_seen(previous, current)
     state_changed = previous != history
     if args.dry_run:
@@ -69,6 +72,8 @@ async def run(args: argparse.Namespace) -> int:
             print("notified: " + (", ".join(destinations) or "no destinations configured"))
         elif first_run and changes:
             print("baseline created; initial items were not notified")
+        if baseline_sources:
+            print("baseline created for: " + ", ".join(sorted(baseline_sources)))
 
     for failure in failures:
         print(f"warning: {failure}", file=sys.stderr)
