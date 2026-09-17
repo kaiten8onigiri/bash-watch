@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "bash-watch"
-version = "0.1.0"
-description = "Monitor official basketball shoe pages and notify only on changes"
+version = "0.2.0"
+description = "Monitor official basketball shoe pages and notify once for new products"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
