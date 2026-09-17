@@ -1,4 +1,4 @@
-user_agent: "bash-watch/0.1 (personal release monitor; contact: repository owner)"
+user_agent: "bash-watch/0.2 (personal release monitor; contact: repository owner)"
 
 # Official Japanese product pages. Add/remove entries without changing code.
 sources:
