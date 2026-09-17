@@ -2,8 +2,8 @@ name: Watch official basketball shoe releases
 
 on:
   schedule:
-    # Daily at 12:00 JST (03:00 UTC).
-    - cron: "0 3 * * *"
+    # Every Monday at 12:00 JST (03:00 UTC).
+    - cron: "0 3 * * 1"
   workflow_dispatch:
     inputs:
       notify_initial:
@@ -12,9 +12,9 @@ on:
         type: boolean
         default: false
 
-# The workflow never writes to main. State is kept in the Actions cache.
+# Write access is used only to persist the append-only history on the state branch.
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: basketball-shoe-watch
@@ -23,27 +23,26 @@ concurrency:
 jobs:
   watch:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: .
-    # Hard-stop a stalled run so it cannot consume unbounded Actions minutes.
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out monitor
+        uses: actions/checkout@v4
+        with:
+          path: app
+      - name: Check out durable state
+        uses: actions/checkout@v4
+        with:
+          ref: state
+          path: state
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
-      - name: Restore deduplication state
-        uses: actions/cache@v4
-        with:
-          path: data/state.json
-          key: ${{ runner.os }}-bash-watch-state-${{ github.run_id }}
-          restore-keys: |
-            ${{ runner.os }}-bash-watch-state-
+          cache-dependency-path: app/pyproject.toml
       - name: Install
-        run: pip install .
+        run: pip install ./app
       - name: Check official pages and notify
+        working-directory: app
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
@@ -57,4 +56,16 @@ jobs:
         run: |
           extra=""
           if [ "${{ inputs.notify_initial }}" = "true" ]; then extra="--notify-initial"; fi
-          bash-watch --notify $extra
+          bash-watch --state "$GITHUB_WORKSPACE/state/data/state.json" --notify $extra
+      - name: Persist known product history
+        working-directory: state
+        run: |
+          if git diff --quiet -- data/state.json; then
+            echo "No new product identities to persist"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/state.json
+          git commit -m "state: record newly observed products"
+          git push origin HEAD:state
