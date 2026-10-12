@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-05T09:45:23.747440+00:00",
+  "checked_at": "2026-10-12T09:56:24.018936+00:00",
   "items": {
     "01e9e2577085d980396a2249": {
       "source": "Nike JP",
@@ -265,6 +265,14 @@
       "availability": null,
       "image": null
     },
+    "445f9d3aeb67a85a47705f9f": {
+      "source": "Nike JP",
+      "title": "テイタム 5",
+      "url": "https://www.nike.com/jp/t/テイタム-5-リトルキッズシューズ-ZoZMls4s/IO1748-002",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
     "4488f6ce31c86496988e5189": {
       "source": "Under Armour JP",
       "title": "SALE フォックス1 バンディート（バスケットボール/UNISEX） ￥8,580 40%OFF ￥14,300 （7）",
@@ -509,6 +517,14 @@
       "source": "Under Armour JP",
       "title": "SALE カリー スプラッシュ 25 AP（バスケットボール/UNISEX） ￥6,985 50%OFF ￥13,970",
       "url": "https://www.underarmour.co.jp/f/dsg-1097688",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "85c5b00c4c9d31de3cc20431": {
+      "source": "Nike JP",
+      "title": "ケイトリン 1 EP",
+      "url": "https://www.nike.com/jp/t/ケイトリン-1-ep-バスケットボールシューズ-Jl0IYvaf/IH7421-600",
       "price": null,
       "availability": null,
       "image": null
