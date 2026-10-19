@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-12T09:56:24.018936+00:00",
+  "checked_at": "2026-10-19T08:13:19.185780+00:00",
   "items": {
     "01e9e2577085d980396a2249": {
       "source": "Nike JP",
@@ -145,6 +145,14 @@
       "availability": null,
       "image": null
     },
+    "27fc8313a2895ba7b39f4821": {
+      "source": "Nike JP",
+      "title": "ヤニス フリーク 8 \"Halloween\" EP",
+      "url": "https://www.nike.com/jp/t/ヤニス-フリーク-8-halloween-ep-バスケットボールシューズ-dkG9aE9k/IO7944-300",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
     "292906792f34a3b0e5459f56": {
       "source": "Under Armour JP",
       "title": "SALE 在庫残り僅か カリー スプラッシュ24 AP（バスケットボール/UNISEX） ￥7,150 50%OFF ￥14,300 （3）",
@@ -277,6 +285,14 @@
       "source": "Under Armour JP",
       "title": "SALE フォックス1 バンディート（バスケットボール/UNISEX） ￥8,580 40%OFF ￥14,300 （7）",
       "url": "https://www.underarmour.co.jp/f/dsg-1072017",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "4708ed76d7667678d5d46ee8": {
+      "source": "Nike JP",
+      "title": "ジャ 4 \"Zombie\" EP",
+      "url": "https://www.nike.com/jp/t/ジャ-4-zombie-ep-バスケットボールシューズ-EtU07Lox/IO7936-300",
       "price": null,
       "availability": null,
       "image": null
@@ -525,6 +541,14 @@
       "source": "Nike JP",
       "title": "ケイトリン 1 EP",
       "url": "https://www.nike.com/jp/t/ケイトリン-1-ep-バスケットボールシューズ-Jl0IYvaf/IH7421-600",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "8629b79638a86feab0a900dd": {
+      "source": "Nike JP",
+      "title": "ジャ 4 \"Zombie\"",
+      "url": "https://www.nike.com/jp/t/ジャ-4-zombie-ジュニア-バスケットボールシューズ-Jo8hT3Qk/IU7664-300",
       "price": null,
       "availability": null,
       "image": null
@@ -817,10 +841,26 @@
       "availability": null,
       "image": null
     },
+    "fa92061f6d4552987b40cfad": {
+      "source": "Nike JP",
+      "title": "サブリナ 4 \"Count Ionescu\"",
+      "url": "https://www.nike.com/jp/t/サブリナ-4-count-ionescu-ジュニア-バスケットボールシューズ-Pft6fEIr/IZ3426-001",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
     "fd4ace092b9b728558f2b7ec": {
       "source": "Under Armour JP",
       "title": "SALE カリー 13（バスケットボール/UNISEX） ￥9,196 60%OFF ￥22,990 （1）",
       "url": "https://www.underarmour.co.jp/f/dsg-1093358",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "fecd3e149107700e484d36ca": {
+      "source": "Nike JP",
+      "title": "ナイキ S.T.チャージ \"Halloween\" EP",
+      "url": "https://www.nike.com/jp/t/ナイキ-stチャージ-halloween-ep-メンズ-バスケットボールシューズ-3BtP3dWP/IZ2607-200",
       "price": null,
       "availability": null,
       "image": null
