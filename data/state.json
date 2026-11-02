@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-26T08:13:45.389977+00:00",
+  "checked_at": "2026-11-02T10:13:12.786351+00:00",
   "items": {
     "01e9e2577085d980396a2249": {
       "source": "Nike JP",
@@ -21,6 +21,14 @@
       "source": "Under Armour JP",
       "title": "SALE 在庫残り僅か カリー12 ＜SATURN＞（バスケットボール/UNISEX） ￥9,350 50%OFF ￥18,700 （2）",
       "url": "https://www.underarmour.co.jp/f/dsg-1082421",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "0667bbd4cc20694ff5dfb449": {
+      "source": "Nike JP",
+      "title": "コービー A.D. プロトロ",
+      "url": "https://www.nike.com/jp/t/コービー-ad-プロトロ-バスケットボールシューズ-b9XlqcO5/IO8233-500",
       "price": null,
       "availability": null,
       "image": null
@@ -153,10 +161,34 @@
       "availability": null,
       "image": null
     },
+    "2498582f5e3918c5d7dd2555": {
+      "source": "Under Armour JP",
+      "title": "UA フォックス3（バスケットボール/UNISEX） ￥17,930",
+      "url": "https://www.underarmour.co.jp/f/dsg-1099754",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
     "252da0e954070dece6062c49": {
       "source": "Under Armour JP",
       "title": "SALE カリー ホバー スプラッシュ3 AP（バスケットボール/MEN） ￥7,150 50%OFF ￥14,300 （4） SOLD OUT",
       "url": "https://www.underarmour.co.jp/f/dsg-1042147",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "2594f58ff6722b42f81270b4": {
+      "source": "Nike JP",
+      "title": "レブロン ウィットネス X PER EP",
+      "url": "https://www.nike.com/jp/t/レブロン-ウィットネス-x-per-ep-バスケットボールシューズ-A5VlWFIS/IQ9848-300",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "2710a47a2a7aed10cc47f3ac": {
+      "source": "Nike JP",
+      "title": "ナイキ S.T. ダイナマイト x LEGO® コレクション",
+      "url": "https://www.nike.com/jp/t/ナイキ-st-ダイナマイト-x-lego-コレクション-リトルキッズ-バスケットボールシューズ-QD0yLFFe/IU2556-001",
       "price": null,
       "availability": null,
       "image": null
@@ -173,6 +205,14 @@
       "source": "Under Armour JP",
       "title": "SALE 在庫残り僅か カリー スプラッシュ24 AP（バスケットボール/UNISEX） ￥7,150 50%OFF ￥14,300 （3）",
       "url": "https://www.underarmour.co.jp/f/dsg-1062805",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "2abff2d151f66fd0ac17b747": {
+      "source": "Nike JP",
+      "title": "コービー 3 LOW",
+      "url": "https://www.nike.com/jp/t/コービー-3-low-ジュニア-バスケットボールシューズ-XzoOQU3N/IZ7934-900",
       "price": null,
       "availability": null,
       "image": null
@@ -273,6 +313,14 @@
       "availability": null,
       "image": null
     },
+    "3ec63dad0a341804c91a5a35": {
+      "source": "Nike JP",
+      "title": "ジャ 4 HIGH \"Halloween\" EP",
+      "url": "https://www.nike.com/jp/t/ジャ-4-high-halloween-ep-バスケットボールシューズ-Y52wtJz5/IQ3865-600",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
     "3f8c8660f16140d8da0e0088": {
       "source": "Under Armour JP",
       "title": "SALE 直営限定 カリー シリーズ7（バスケットボール/KIDS） ￥5,984 60%OFF ￥14,960 （3）",
@@ -309,6 +357,14 @@
       "source": "Under Armour JP",
       "title": "SALE フォックス1 バンディート（バスケットボール/UNISEX） ￥8,580 40%OFF ￥14,300 （7）",
       "url": "https://www.underarmour.co.jp/f/dsg-1072017",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "449468085bed15d1dbb388af": {
+      "source": "Nike JP",
+      "title": "ヤニス イモータリティ 5 EP",
+      "url": "https://www.nike.com/jp/t/ヤニス-イモータリティ-5-ep-バスケットボールシューズ-JgiCUhTl/IM5131-006",
       "price": null,
       "availability": null,
       "image": null
@@ -353,6 +409,14 @@
       "availability": null,
       "image": null
     },
+    "4e534697a328b43b114a80c5": {
+      "source": "Nike JP",
+      "title": "ジャ 4 \"Dark Mode\"",
+      "url": "https://www.nike.com/jp/t/ジャ-4-dark-mode-ジュニア-バスケットボールシューズ-JEi5oFfr/IM7569-001",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
     "4f9ef0307554b4be2fcd7250": {
       "source": "Under Armour JP",
       "title": "SALE 在庫残り僅か カリー スプラッシュ 25 AP（バスケットボール/UNISEX） ￥6,985 50%OFF ￥13,970",
@@ -365,6 +429,22 @@
       "source": "Nike JP",
       "title": "コービー 3 LOW",
       "url": "https://www.nike.com/jp/t/コービー-3-low-ジュニア-バスケットボールシューズ-XzoOQU3N/IZ7934-600",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "56f4c8005c21c86224e77a74": {
+      "source": "Nike JP",
+      "title": "コービー 3 LOW プロトロ \"Mamba Eterno\"",
+      "url": "https://www.nike.com/jp/t/コービー-3-low-プロトロ-mamba-eterno-バスケットボールシューズ-E5FD7Er5/IO6260-800",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "5ab33f900af5824e07a8ada5": {
+      "source": "Nike JP",
+      "title": "ケイトリン 1 \"Cave Stone\" EP",
+      "url": "https://www.nike.com/jp/t/ケイトリン-1-cave-stone-ep-バスケットボールシューズ-0YeXY22L/IH7421-101",
       "price": null,
       "availability": null,
       "image": null
@@ -413,6 +493,14 @@
       "source": "Under Armour JP",
       "title": "SALE カリー スプラッシュ26（バスケットボール/UNISEX） ￥4,785 70%OFF ￥15,950 （1）",
       "url": "https://www.underarmour.co.jp/f/dsg-1093289",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "697e8c8cdc8bdc0833ff8523": {
+      "source": "Nike JP",
+      "title": "ナイキ S.T. ダイナマイト x LEGO® コレクション",
+      "url": "https://www.nike.com/jp/t/ナイキ-st-ダイナマイト-x-lego-コレクション-ジュニア-バスケットボールシューズ-QD0yLFFe/IU2555-001",
       "price": null,
       "availability": null,
       "image": null
@@ -805,6 +893,14 @@
       "source": "Under Armour JP",
       "title": "SALE カリー12 チーム（バスケットボール/UNISEX） ￥7,964 60%OFF ￥19,910 （2） SOLD OUT",
       "url": "https://www.underarmour.co.jp/f/dsg-1093179",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "cbf8a7ee9cca639e4b19546e": {
+      "source": "Nike JP",
+      "title": "ケイトリン 1 \"Midnight Fever\"",
+      "url": "https://www.nike.com/jp/t/ケイトリン-1-midnight-fever-ジュニア-バスケットボールシューズ-0YeXY22L/IQ2350-600",
       "price": null,
       "availability": null,
       "image": null
