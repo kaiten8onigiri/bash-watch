@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-02T10:13:12.786351+00:00",
+  "checked_at": "2026-11-09T10:32:56.981599+00:00",
   "items": {
     "01e9e2577085d980396a2249": {
       "source": "Nike JP",
@@ -13,6 +13,14 @@
       "source": "Under Armour JP",
       "title": "SALE 在庫残り僅か カリー スプラッシュ 25 AP（バスケットボール/UNISEX） ￥6,985 50%OFF ￥13,970 （2）",
       "url": "https://www.underarmour.co.jp/f/dsg-1078115",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "02de8da1429930283e7887f2": {
+      "source": "Nike JP",
+      "title": "エア ジョーダン 41 PF \"Meteorite\"",
+      "url": "https://www.nike.com/jp/t/エア-ジョーダン-41-pf-meteorite-バスケットボールシューズ-K3q3IgB8/IR1965-003",
       "price": null,
       "availability": null,
       "image": null
@@ -85,6 +93,14 @@
       "source": "Nike JP",
       "title": "Nike Mind 002",
       "url": "https://www.nike.com/jp/t/mind-002-メンズ-プレゲームシューズ-P2K3Xj0r/HQ4308-401",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "107175d979585d78720e649a": {
+      "source": "Nike JP",
+      "title": "ヤニス フリーク 8 EP",
+      "url": "https://www.nike.com/jp/t/ヤニス-フリーク-8-ep-バスケットボールシューズ-iu6yBdxN/IQ7705-001",
       "price": null,
       "availability": null,
       "image": null
@@ -221,6 +237,14 @@
       "source": "Under Armour JP",
       "title": "SALE 在庫残り僅か カリー スプラッシュ26（バスケットボール/UNISEX） ￥4,785 70%OFF ￥15,950",
       "url": "https://www.underarmour.co.jp/f/dsg-1093274",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "2cbcaf5aa82456119c8c2509": {
+      "source": "Nike JP",
+      "title": "ジョーダン トライアングル PF \"Meteorite\"",
+      "url": "https://www.nike.com/jp/t/ジョーダン-トライアングル-pf-meteorite-バスケットボールシューズ-Cqb5hpA0/JA1548-001",
       "price": null,
       "availability": null,
       "image": null
@@ -409,6 +433,14 @@
       "availability": null,
       "image": null
     },
+    "4ba8272328a847d0073d9adf": {
+      "source": "Nike JP",
+      "title": "ジャ 4 \"Blur\" EP",
+      "url": "https://www.nike.com/jp/t/ジャ-4-blur-ep-バスケットボールシューズ-rlTJld6P/IM4136-501",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
     "4e534697a328b43b114a80c5": {
       "source": "Nike JP",
       "title": "ジャ 4 \"Dark Mode\"",
@@ -573,6 +605,14 @@
       "source": "Nike JP",
       "title": "ナイキ G.T. カット 4 \"Halloween\" EP",
       "url": "https://www.nike.com/jp/t/ナイキ-gt-カット-4-halloween-ep-バスケットボールシューズ-aeXKTK4D/IX5394-300",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "78569be3c1dfcb55b9c40a33": {
+      "source": "Nike JP",
+      "title": "ルカ 77 PF",
+      "url": "https://www.nike.com/jp/t/ルカ-77-pf-バスケットボールシューズ-U5aKeQel/IF1611-502",
       "price": null,
       "availability": null,
       "image": null
@@ -753,6 +793,14 @@
       "availability": null,
       "image": null
     },
+    "9c0d27640f4683f595e18e6c": {
+      "source": "Nike JP",
+      "title": "ブック 2 \"Chromaflair\" EP",
+      "url": "https://www.nike.com/jp/t/ブック-2-chromaflair-ep-バスケットボールシューズ-6YIgKeXl/FZ7014-003",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
     "9f1825b75aeadb0fb6ccf68d": {
       "source": "Under Armour JP",
       "title": "SALE 在庫残り僅か カリー フォックス1 ＜THE BEAM＞（バスケットボール/UNISEX） ￥8,580 40%OFF ￥14,300 （3）",
@@ -833,6 +881,22 @@
       "availability": null,
       "image": null
     },
+    "b1d9bfddef5dc8d16ec87d9e": {
+      "source": "Nike JP",
+      "title": "レブロン 24 EP",
+      "url": "https://www.nike.com/jp/t/レブロン-24-ep-バスケットボールシューズ-FIRhozG7/IO8203-400",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "b3f3a28d0ffa7ad0e7c1396e": {
+      "source": "Nike JP",
+      "title": "KD19 \"Aunt Pearl\" EP",
+      "url": "https://www.nike.com/jp/t/kd19-aunt-pearl-ep-バスケットボールシューズ-dJgZTM4h/IO8110-600",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
     "b91df105078fe6afe2e449b6": {
       "source": "Nike JP",
       "title": "ジャ 4 \"Deep Water\" EP",
@@ -909,6 +973,22 @@
       "source": "Nike JP",
       "title": "ジャ 4 \"Heat Check\" EP",
       "url": "https://www.nike.com/jp/t/ジャ-4-heat-check-ep-バスケットボールシューズ-8KYpjNcP/JA9746-400",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "cebf4196bdf8f25dba3d9cca": {
+      "source": "Nike JP",
+      "title": "サブリナ 4 EP",
+      "url": "https://www.nike.com/jp/t/サブリナ-4-ep-バスケットボールシューズ-JY6p6tXg/II0403-004",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "cf9814a121e266705d23e1e8": {
+      "source": "Nike JP",
+      "title": "ジョーダン トライアングル PF",
+      "url": "https://www.nike.com/jp/t/ジョーダン-トライアングル-pf-バスケットボールシューズ-09RgwOG9/IO0424-900",
       "price": null,
       "availability": null,
       "image": null
