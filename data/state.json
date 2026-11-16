@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-09T10:32:56.981599+00:00",
+  "checked_at": "2026-11-16T10:18:52.377970+00:00",
   "items": {
     "01e9e2577085d980396a2249": {
       "source": "Nike JP",
@@ -609,6 +609,14 @@
       "availability": null,
       "image": null
     },
+    "761144cf22a0d1bd542348fd": {
+      "source": "Nike JP",
+      "title": "サブリナ 4 EP",
+      "url": "https://www.nike.com/jp/t/サブリナ-4-ep-バスケットボールシューズ-JY6p6tXg/II0403-102",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
     "78569be3c1dfcb55b9c40a33": {
       "source": "Nike JP",
       "title": "ルカ 77 PF",
@@ -849,6 +857,14 @@
       "availability": null,
       "image": null
     },
+    "a91d74b90b420d213bd07537": {
+      "source": "Nike JP",
+      "title": "エア ジョーダン 41 PF \"Amethyst\"",
+      "url": "https://www.nike.com/jp/t/エア-ジョーダン-41-pf-amethyst-バスケットボールシューズ-K3q3IgB8/IR1965-002",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
     "ab36e9f55949429f0ee25c64": {
       "source": "Under Armour JP",
       "title": "UAロックダウン8（バスケットボール/KIDS） ￥8,470",
@@ -925,6 +941,14 @@
       "source": "Nike JP",
       "title": "サブリナ 4 SE EP",
       "url": "https://www.nike.com/jp/t/サブリナ-4-se-ep-バスケットボールシューズ-JY6p6tXg/IV5267-500",
+      "price": null,
+      "availability": null,
+      "image": null
+    },
+    "c372495043711cdea2a29aa4": {
+      "source": "Nike JP",
+      "title": "JA 4",
+      "url": "https://www.nike.com/jp/t/ジャ-4-ジュニア-バスケットボールシューズ-JEi5oFfr/IM7569-100",
       "price": null,
       "availability": null,
       "image": null
